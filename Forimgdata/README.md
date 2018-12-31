@@ -1,7 +1,9 @@
 ### 关于图像数据制作的准备
-[1] [make_train_val.py](https://github.com/King-Key/Blogger/blob/master/Forimgdata/make_train_val.py):图像数据的分割,根据设定的数目随机将图像数据划分为训练集和测试集
+#### [以下所有程序的文件路径和参数都需要按照自己的需求进行设定]
 
-[2] [add_data.py](https://github.com/King-Key/Blogger/blob/master/Forimgdata/add_data.py):为图像数据增加椒盐噪声,并将标签文件进行相应的复制与修改
+[1] [make_train_val.py](https://github.com/King-Key/Blogger/blob/master/Forimgdata/make_train_val.py):图像数据的分割,根据设定的数目随机将图像数据划分为训练集和测试集,生成用于训练和测试的数据文件
+
+[2] [add_data.py](https://github.com/King-Key/Blogger/blob/master/Forimgdata/add_data.py):为图像数据增加椒盐噪声,并将标签文件进行相应的复制与修改,进行数据扩充
 
 [3] [data_make.py](https://github.com/King-Key/Blogger/blob/master/Forimgdata/data_make.py):生成带坐标的数据文件
 
