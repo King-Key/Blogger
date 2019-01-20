@@ -8,9 +8,9 @@
 
 - [itchat-2.py](https://github.com/King-Key/Test/blob/itchat/itchat/itchat-2.py):itchat利用接口实现简单的聊天机器人
 
-
-
 - [itchat-3.py](https://github.com/King-Key/Test/blob/itchat/itchat/itchat-3.py):itchat获取好友城市信息，并在地图上进行显示标注
+
+- [itchat-4.py](https://github.com/King-Key/Blogger/blob/itchat/itchat/itchat-4.py):获取微信好友信息，绘执地理坐标图
 
 - [vediotochar.py](https://github.com/King-Key/Blogger/blob/d8ff1afc0852996ad317fd9bc879bdbd6ed3e4d0/itchat/vediotochar.py)
 :视频转换字符
