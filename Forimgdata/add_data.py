@@ -5,21 +5,7 @@ from numpy import *
 import re
 import xml.dom.minidom
 
-file_num
 
-#定义添加高斯噪声的函数
-def GaussianNoise(src,means,sigma,percetage):
-    NoiseImg=src
-    NoiseNum=int(percetage*src.shape[0]*src.shape[1])
-    for i in range(NoiseNum):
-        randX=random.randint(0,src.shape[0]-1)
-        randY=random.randint(0,src.shape[1]-1)
-        NoiseImg[randX, randY]=NoiseImg[randX,randY]+random.gauss(means,sigma)
-        if  NoiseImg[randX, randY]< 0:
-                 NoiseImg[randX, randY]=0
-        elif NoiseImg[randX, randY]>255:
-                 NoiseImg[randX, randY]=255
-    return NoiseImg
 
 def PepperandSalt(src,percetage):
     NoiseImg=src
@@ -34,15 +20,6 @@ def PepperandSalt(src,percetage):
     return NoiseImg
 
 
-def rename_file(file_name):
-    if '.' in file_name:
-        file_num = file_name.split('.')[0]
-        add_file_name_num = int(file_num) + file_num
-
-    return str(add_file_name_num).zfill(6)
-
-
-
 im_path = 'JPEGImages/'
 #xml_path='Annotations/'
 
@@ -50,7 +27,14 @@ im_names = os.listdir(im_path)
 #xml_names=os.listdir(xml_path)
 #print(xml_names)
 
-file_num=len(im_names)
+def rename_file(file_name):
+    if '.' in file_name:
+        file_num = file_name.split('.')[0]
+        add_file_name_num = int(file_num) + len(im_names)
+
+    return str(add_file_name_num).zfill(6)
+
+
 for im_name in im_names:
 
     im=cv2.imread(im_path+im_name)

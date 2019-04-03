@@ -13,12 +13,12 @@ friends = itchat.get_friends(update=True)[0:]
 num = 0
 for friend in friends:
     image = itchat.get_head_img(userName=friend["UserName"]) #用 itchat.get_head_img(userName=None)来爬取好友列表的头像
-    fileImage = open("/home/guo/桌面/Work/chat/img/" + "/" + str(num) + ".jpg",'wb') #将好友头像下载到本地文件夹
+    fileImage = open("./img/" + "/" + str(num) + ".jpg",'wb') #将好友头像下载到本地文件夹
     fileImage.write(image)
     fileImage.close()
     num += 1
 #将微信图像进行拼接
-dirs = os.listdir("/home/guo/桌面/Work/chat/img/")
+dirs = os.listdir("./img/")
 each_size = int(math.sqrt(float(640*640)/len(dirs))) 
 line = int(640.0/each_size) 
 photographic = Image.new("RGB",(640,640))
@@ -26,7 +26,7 @@ x = 0
 y = 0
 for i in range(0,len(dirs)): 
     try:
-        imageOfFriends = Image.open("/home/guo/桌面/Work/chat/img/" + "/" + str(i) + ".jpg") #打开一张照片，PIL库的应用
+        imageOfFriends = Image.open("./img/" + "/" + str(i) + ".jpg") #打开一张照片，PIL库的应用
     except IOError:
         print "error"
     else:
@@ -37,6 +37,6 @@ for i in range(0,len(dirs)):
             x = 0
             y += 1
 #保存图像，发送给文件助手，显示图像
-photographic.save("/home/guo/桌面/Work/chat/img/" + "/" + "all.jpg") 
-itchat.send_image("/home/guo/桌面/Work/chat/img/" + "/" + "all.jpg","filehelper") #把图片发送给微信文件助手（filehelper
+photographic.save("./img/" + "/" + "all.jpg") 
+itchat.send_image("./img/" + "/" + "all.jpg","filehelper") #把图片发送给微信文件助手（filehelper
 photographic.show()

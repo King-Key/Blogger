@@ -2,8 +2,13 @@
 import requests
 import itchat
 import time
+import threading
+
+
+
 
 KEY = '8edce3ce905a4c1dbb965e6b35c3834d'
+
 
 def get_response(msg):
     apiUrl = 'http://www.tuling123.com/openapi/api'
@@ -28,8 +33,13 @@ def tuling_reply(msg):
 # 封装好的装饰器，当接收到的消息是Text，即文字消息
 @itchat.msg_register('Text')
 def text_reply(msg):
+    # global exec_count
+    # exec_count+=1
+    # if exec_count<60 ||msg==None:
+
     # 当消息不是由自己发出的时候
     if not msg['FromUserName'] == myUserName:
+        #print msg['FromUserName']
         # 发送一条提示给文件助手
         itchat.send_msg(u"[%s]收到好友@%s 的信息：%s\n" %
                         (time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(msg['CreateTime'])),

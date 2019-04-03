@@ -14,31 +14,31 @@ import json
 import itchat
 import io
 
-# def get_data():
-# 	#登录
-# 	itchat.auto_login()
-# 	#获取朋友数据
-# 	friends=itchat.get_friends(update=True)
-# 	return friends
-# #处理数据
-# def chuli_data(data):
-# 	friends_data=[]
-# 	for item in data[1:]:
-# 		friend={
-# 		'NickName':item['NickName'],#昵称
-# 		'RemarkName':item['RemarkName'],#备注
-# 		'Province':item['Province'],#省份
-# 		'City':item['City'],#城市
-# 		}
-# 		print friend
-# 		friends_data.append(friend)
-# 	return friends_data
-# #保存
-# def save():
-# 	friends=chuli_data(get_data())
-# 	for item in friends:
-# 		with io.open('friends.txt',mode='a',encoding='utf-8') as f:
-# 			f.write('%s,%s,%s,%s\n'%(item['NickName'],item['RemarkName'],item['Province'],item['City']))
+def get_data():
+	#登录
+	itchat.auto_login()
+	#获取朋友数据
+	friends=itchat.get_friends(update=True)
+	return friends
+#处理数据
+def chuli_data(data):
+	friends_data=[]
+	for item in data[1:]:
+		friend={
+		'NickName':item['NickName'],#昵称
+		'RemarkName':item['RemarkName'],#备注
+		'Province':item['Province'],#省份
+		'City':item['City'],#城市
+		}
+		#print friend
+		friends_data.append(friend)
+	return friends_data
+#保存
+def save():
+	friends=chuli_data(get_data())
+	for item in friends:
+		with io.open('friends.txt',mode='a',encoding='utf-8') as f:
+			f.write('%s,%s,%s,%s\n'%(item['NickName'],item['RemarkName'],item['Province'],item['City']))
 
 
 
@@ -108,7 +108,8 @@ def handle(cities):
 
 
 if __name__=='__main__':
-	render()
+    save()
+    render()
 
 
 # friends_data=[]

@@ -12,7 +12,7 @@
 
 - [itchat-4.py](https://github.com/King-Key/Blogger/blob/itchat/itchat/itchat-4.py):获取微信好友信息，绘执地理坐标图
 
--[itchat-5.py](https://github.com/King-Key/Blogger/blob/master/itchat/itchat-5.py):好友发来信息的自动回复，并语音播报
+- [itchat-5.py](https://github.com/King-Key/Blogger/blob/master/itchat/itchat-5.py):好友发来信息的自动回复，并语音播报
 
 - [vediotochar.py](https://github.com/King-Key/Blogger/blob/d8ff1afc0852996ad317fd9bc879bdbd6ed3e4d0/itchat/vediotochar.py)
 :视频转换字符
