@@ -7,8 +7,6 @@
 [[博客链接](https://blog.csdn.net/King_key/article/details/79249984)]
 
 - [itchat-2.py](https://github.com/King-Key/Test/blob/itchat/itchat/itchat-2.py):itchat利用接口实现简单的聊天机器人
-		
-		- itchat文件夹：是利用打包文件对itchat.py进行的打包后的可执行文件
 
 - [itchat-3.py](https://github.com/King-Key/Test/blob/itchat/itchat/itchat-3.py):itchat获取好友城市信息，并在地图上进行显示标注
 
