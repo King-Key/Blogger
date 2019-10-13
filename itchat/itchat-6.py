@@ -18,8 +18,8 @@ itchat.auto_login(hotReload=True)
 #获取群聊信息
 roomslist = itchat.get_chatrooms(update=True)
 
-find_name_1="自"
-find_name_2="视觉"
+find_name_1=""
+find_name_2=""
 #插入excel
 #创建excel表单
 workbook=xlsxwriter.Workbook("群聊用户名单.xlsx")

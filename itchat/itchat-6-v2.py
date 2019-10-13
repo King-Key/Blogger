@@ -19,7 +19,7 @@ itchat.auto_login()
 #获取群聊信息
 roomslist = itchat.get_chatrooms(update=True)
 
-find_name_1="视觉感知"
+find_name_1=""
 find_name_2=""
 #插入excel
 
