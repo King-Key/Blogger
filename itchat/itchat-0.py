@@ -20,10 +20,10 @@ total=len(friends[1:])
 # 	+ "女性好友: %.2f%%"%(float(female)/total*100)+"\n"
 # 	+ "性别不明:  %.2f%%"%(float(other)/total*100))
 
-print "好友数量: ",male+female+other
-print "男性好友: ",male,"---%.2f%%"%(float(male)/total*100)
-print "女性好友: ",female, "---%.2f%%"%(float(female)/total*100)
-print "性别不明: ",other, "---%.2f%%"%(float(other)/total*100)
+print ("好友数量: ",male+female+other)
+print ("男性好友: ",male,"---%.2f%%"%(float(male)/total*100))
+print ("女性好友: ",female, "---%.2f%%"%(float(female)/total*100))
+print ("性别不明: ",other, "---%.2f%%"%(float(other)/total*100))
 
 labels="male","female","other"
 sizes=[(float(male)/total*100),(float(female)/total*100),(float(other)/total*100)]

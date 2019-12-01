@@ -19,12 +19,13 @@ itchat.auto_login()
 #获取群聊信息
 roomslist = itchat.get_chatrooms(update=True)
 
-find_name_1=""
-find_name_2=""
+
+find_name_1="东西"
+find_name_2="智东西"
 #插入excel
 
 def validateTitle(title):
-    rstr = r"[\/\\\:\*\?\"\<\>\|]"  # '/ \ : * ? " < > |'
+    rstr = r"[\/\\\:\*\?\"\<\>\|\]"  # '/ \ : * ? " < > |'
     new_title = re.sub(rstr, "_", title)  # 替换为下划线
     return new_title
 
@@ -32,8 +33,10 @@ for i in range(0,len(roomslist)-1):
 	#根据名称搜索群聊信息
 	if find_name_1 in roomslist[i]['NickName'] or find_name_2 in roomslist[i]['NickName']:
 
+
 		#根据群聊名称创建excel表单
-		name=validateTitle(roomslist[i]['NickName'])
+		#name=validateTitle(roomslist[i]['NickName'])
+		name=roomslist[i]['NickName']
 		workbook=xlsxwriter.Workbook(name+".xlsx")
 		worksheet=workbook.add_worksheet(name)
 
@@ -44,7 +47,7 @@ for i in range(0,len(roomslist)-1):
 		myroom=itchat.search_chatrooms(name=roomslist[i]['NickName'])
 		#获取群聊名称
 		gsp=itchat.update_chatroom(myroom[0]['UserName'], detailedMember=True)
-		print("群名：{} \t 人数：{}".format(roomslist[i]['NickName'],len(gsp['MemberList'])))
+		#print("群名：{} \t 人数：{}".format(roomslist[i]['NickName'],len(gsp['MemberList'])))
 
 		nickname=[]
 		displayname=[]

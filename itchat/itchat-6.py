@@ -17,9 +17,11 @@ from itchat.content import TEXT
 itchat.auto_login(hotReload=True)
 #获取群聊信息
 roomslist = itchat.get_chatrooms(update=True)
+for i in range(0,len(roomslist)-1):
+	print(roomslist[i]['NickName']) 
 
-find_name_1=""
-find_name_2=""
+find_name_1="智东西"
+find_name_2="智东西"
 #插入excel
 #创建excel表单
 workbook=xlsxwriter.Workbook("群聊用户名单.xlsx")
