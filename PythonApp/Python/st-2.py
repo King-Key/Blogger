@@ -16,7 +16,7 @@ while(cap.isOpened()):
     if ret == True:
 
         #cv2.imshow("vedio", frame)
-        st.image(frame,format="video/mp4",use_column_width=True)
+        st.image(frame)
 
         # vedio write
         #out.write(frame)
