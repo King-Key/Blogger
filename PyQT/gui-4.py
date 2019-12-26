@@ -19,7 +19,7 @@ class Example(QMainWindow):
 
     def initUI(self):
 
-        # 图标
+        # 工具栏
         exitAction = QAction(
             QIcon("/home/king-key/图片/cat1.jpeg"), "&Exit", self)
         exitAction.setShortcut("Ctrl+Q")

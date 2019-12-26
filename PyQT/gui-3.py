@@ -25,7 +25,6 @@ class Example(QWidget):
 
     #     labl2 = QLabel("tutorials", self)
     #     labl2.move(35, 40)
-
     #     labl3 = QLabel("programmers", self)
     #     labl3.move(55, 70)
 
