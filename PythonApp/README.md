@@ -7,3 +7,5 @@
 #### [PaintApp](https://github.com/King-Key/Blogger/tree/master/PythonApp/PaintApp)：可以利用鼠标进行画图的程序
 
 #### [PyGame](https://github.com/King-Key/Blogger/tree/master/PythonApp/PyGame)：自己在学习PyGame过程中的编写的小游戏案例
+
+#### [Python](https://github.com/King-Key/Blogger/tree/master/PythonApp/Python)：Python扩展包的学习案例
