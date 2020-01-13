@@ -13,6 +13,7 @@ from PyQt5.QtWidgets import QApplication, QWidget, QToolTip, QPushButton, QDeskt
 from PyQt5.QtGui import QIcon, QFont
 from PyQt5.QtGui import *
 import cv2
+from trueLove import *
 
 
 
@@ -63,7 +64,10 @@ class Example(QWidget):
         self.show()
 
     def trueButtonEvent(self):
-    	self.close()
+        sender=self.sender()
+        event=QApplication.instance()
+        event.quit()
+
 
     #按钮移动事件
     def eventFilter(self,object,event):
