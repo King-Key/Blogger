@@ -10,18 +10,21 @@
 
 import os
 import sys
-import xlsxwriter
+	
 import itchat,time
 from itchat.content import TEXT
 import re
+
+find_name=input("请输入关键词：")
+print(find_name)
  #其中hotReload=True参数是为了短暂记忆登录状态，避免每登录一次就扫一次二维码
 itchat.auto_login()
 #获取群聊信息
 roomslist = itchat.get_chatrooms(update=True)
 
 
-find_name_1="东西"
-find_name_2="智东西"
+# find_name_1="东西"
+# find_name_2="智东西"
 #插入excel
 
 def validateTitle(title):
@@ -31,7 +34,7 @@ def validateTitle(title):
 
 for i in range(0,len(roomslist)-1):
 	#根据名称搜索群聊信息
-	if find_name_1 in roomslist[i]['NickName'] or find_name_2 in roomslist[i]['NickName']:
+	if find_name in roomslist[i]['NickName']:
 
 
 		#根据群聊名称创建excel表单
