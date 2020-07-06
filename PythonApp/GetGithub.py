@@ -49,7 +49,7 @@ def scrape(language, filename):
 
     # codecs to solve the problem utf-8 codec like chinese
     with codecs.open(filename, "a", "utf-8") as f:
-        f.write('\n####{language}\n'.format(language=language))
+        f.write('\n#### {language}\n'.format(language=language))
 
         for item in items:
             i = pq(item)
@@ -83,4 +83,4 @@ def job():
 if __name__ == '__main__':
     while True:
         job()
-        time.sleep(12 * 60 * 60)
+        # time.sleep(12 * 60 * 60)
